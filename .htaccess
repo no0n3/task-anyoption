@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# This url rewrite is for the old structure
+#RewriteRule ^backend/accounts$ backend/views/accounts.php
+
+RewriteRule ^backend/([a-zA-Z0-9]+)/?([a-zA-Z0-9]+)?$ backend/index.php/$1/$2
+
+<Files *.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
